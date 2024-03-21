@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headerBg {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  background-image: url("../../public/career.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contactBg {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  background-image: url("../../public/contact.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 65%;
+}
+
+.missionBg {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-image: url("../../public/mission.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 35%;
+}
+
+.textBg {
+  background-color: rgba(155, 154, 152, 0.6);
+}
