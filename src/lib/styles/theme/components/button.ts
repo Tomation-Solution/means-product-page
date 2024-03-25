@@ -35,6 +35,8 @@ export const Button: ComponentStyleConfig = {
             borderColor: "secondary.sub",
             borderWidth: ".14rem",
             color: "secondary.sub",
+                        bg: "primary.sub",
+
             // _hover: {
             //     borderColor: "secondary.sub_",
             //     color: "secondary.sub_",

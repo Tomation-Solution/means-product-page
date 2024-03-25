@@ -40,7 +40,7 @@ export function Header() {
           <Button variant={"sub"} display={{ base: "none", lg: "flex" }}>
             Get Started
           </Button>
-          <Button bg={"primary.main"} display={{ base: "none", lg: "flex" }}>
+          <Button  variant={"sub"} display={{ base: "none", lg: "flex" }}>
             Request a demo
           </Button>
           <IconButton
