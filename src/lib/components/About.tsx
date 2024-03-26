@@ -15,7 +15,7 @@ export function About() {
   return (
     <Flex
       px={"5%"}
-      pt={{ base: "10%", lg: "5%" }}
+      pt={{ base: "10%", lg: "10%" }}
       pb={{ base: "10%", lg: "10%" }}
       gap={{ base: "10px", lg: "15px", xl: "20px" }}
       direction={"column"}
@@ -34,6 +34,7 @@ export function About() {
         fontSize={"1rem"}
         color={{ base:'gray.800', lg:"gray.700"}}
         maxW={{ base: "100%", lg: "50%" }}
+        width='fit-content'
         textAlign={"center"}
         className='textBg2'
         p={'1'}
