@@ -48,7 +48,7 @@ export function Hero() {
         pb={"5%"}
         gap={{ base: "50px", lg: "90px", xl: "110px" }}
         direction={"column"}
-        h={{lg:"600px"}}
+        h={{ lg: "600px" }}
       >
         <Flex
           direction={{ base: "column-reverse", lg: "row" }}
@@ -60,8 +60,15 @@ export function Hero() {
             direction={"column"}
             maxW={{ base: "100%", lg: "40%" }}
             gap={"1rem"}
+            mt={{ base: "35%", lg: "0" }}
+            alignItems={{base:'center', lg:'start'}}
           >
-            <Text fontSize={"2.2rem"} color={"gray.700"} fontWeight="500">
+            <Text
+              fontSize={"2.2rem"}
+              align={{ base: "center", lg: "start" }}
+              color={"gray.700"}
+              fontWeight="500"
+            >
               We are dedicated to transforming organizations through strategic
               training, staffing, and outsourcing solutions.
             </Text>
@@ -85,12 +92,18 @@ export function Hero() {
                 boxShadow={"0 20px 25px rgba(0, 0, 0, 0.5)"}
               />
             </Box>
-            <Box top="75%" left={{lg:"30%"}} zIndex="35" position="absolute">
+            <Box
+              top="75%"
+              left={{ base: "9%", lg: "30%" }}
+              zIndex="35"
+              position="absolute"
+            >
               <Image
                 alt=""
                 src={"/pic2.jpeg"}
                 boxShadow={"0 20px 25px rgba(0, 0, 0, 0.5)"}
-                w={{ sm: "80%", lg: "100%" }}
+                w={{ base: "80%", lg: "100%" }}
+                boxSize={{ base: "90%", lg: "none" }}
                 borderRadius="10px"
               />
             </Box>
@@ -98,13 +111,13 @@ export function Hero() {
         </Flex>
       </Flex>
 
-      <Box pt={{ base: "5%", lg: "10%" }} pb={"5%"} px={"5%"}>
+      <Box pt={{ base: "10%", lg: "10%" }} pb={"8%"} px={"5%"}>
         <Text
           fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
           fontWeight={"bold"}
           color={"black"}
-          align="start"
-          pb="1.5rem"
+          align={{ base: "center", lg: "start" }}
+          pb={{base:'.5rem', lg:"1.5rem"}}
           maxW={{ base: "100%", lg: "60%" }}
         >
           Let us guide you towards operational excellence and sustainable
@@ -122,7 +135,7 @@ export function Hero() {
               fontSize={"1rem"}
               color={"gray.600"}
               maxW={{ base: "100%", lg: "50%" }}
-              textAlign={"start"}
+              textAlign={{ base: "center", lg: "start" }}
             >
               At The Means Solutions Consulting, we are passionate about
               empowering organizations to achieve operational excellence through

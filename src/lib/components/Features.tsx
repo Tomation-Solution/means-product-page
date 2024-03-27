@@ -87,9 +87,9 @@ function FeatureCard(props: FeatureCardProps) {
       <Image
         alt=""
         src={props.img}
-        width="400px"
-        height="200px"
-        boxSize={{lg:"200px"}}
+        w={{lg:"200px"}}
+        h={{lg:"170px"}}
+        borderRadius='10px'
       />
       <Flex direction={"column"} align={"flex-start"} gap='10px'>
         <Text fontWeight={"bold"} color={"gray.700"}>

@@ -24,7 +24,7 @@ export const Button: ComponentStyleConfig = {
       bgGradient: "linear(to-r, secondary.sub__, primary.sub)",
       color: "white",
       _hover: {
-        bgGradient: "linear(to-r, primary.sub, secondary.sub__",
+        bgGradient: "linear(to-r, primary.sub, secondary.sub__)",
       },
     },
     sub: {
@@ -34,8 +34,6 @@ export const Button: ComponentStyleConfig = {
       borderColor: "secondary.sub",
       borderWidth: ".14rem",
       color: "secondary.sub",
-      bg: "primary.sub",
-
       // _hover: {
       //     borderColor: "secondary.sub_",
       //     color: "secondary.sub_",
