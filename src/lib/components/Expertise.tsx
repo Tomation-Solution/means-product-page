@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Text, VStack } from "@chakra-ui/react";
+import { Flex, Text, VStack, Box, Image } from "@chakra-ui/react";
 import {
   Gallery,
   Messages3,
@@ -21,166 +21,116 @@ export function Expertise() {
       align={"center"}
     >
       <Text
-        fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
+        fontSize={{ base: "2rem", lg: "3rem", xl: "3.6rem" }}
         fontWeight={"bold"}
-        color={"gray.700"}
+        color={"primary.sub"}
       >
         OUR EXPERTISE
       </Text>
-      <VStack gap={{ base: "2.5rem", lg: "2rem" }}>
-        <Flex flexDirection="column" gap="1.5rem">
-          <Text
-            fontSize={"1.5rem"}
-            color={"gray.600"}
-            fontWeight="600"
-            textAlign={{ base: "start", lg: "center" }}
-          >
-            Training and Development:
-          </Text>
+      <VStack gap={{ base: "3.5rem", lg: "5rem" }}>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          gap="1.5rem"
+          justifyContent={"space-between"}
+        >
           <Flex
-            justifyContent="space-between"
-            gap="1rem"
-            flexDirection={{ base: "column", lg: "row" }}
+            justifyContent="center"
+            gap={{base:'1rem', lg:"2rem"}}
+            flexDirection={{ base: "column", lg: "column" }}
+            w={{ base: "100%", lg: "50%" }}
           >
             <Text
-              fontSize={"1rem"}
+              fontSize={"1.5rem"}
               color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
+              fontWeight="600"
               textAlign={"start"}
             >
-              Our customized training programs empower professionals with
-              practical skills in BPM and performance management.
+              Training and Development:
             </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              We believe in bridging theory and practice, ensuring that your
-              team can drive efficiency and innovation.
-            </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              We offer customized training programs that cater to diverse
-              industries and roles.
-            </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              Our expert trainers deliver practical insights on BPM, performance
-              measurement, and continuous improvement.
-            </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              Whether you&apos;re an executive, manager, or frontline employee,
-              our training ensures you stay ahead in today&apos;s dynamic
-              business landscape.
+            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
+             -  Our customized training programs empower professionals with
+              practical skills in BPM and performance management.<br />- We believe in
+              bridging theory and practice, ensuring that your team can drive
+              efficiency and innovation.<br />- We offer customized training programs
+              that cater to diverse industries and roles.<br />- Our expert trainers
+              deliver practical insights on BPM, performance measurement, and
+              continuous improvement. Whether you&apos;re an executive, manager,
+              or frontline employee, our training ensures you stay ahead in
+              today&apos;s dynamic business landscape.
             </Text>
           </Flex>
+          <Box w={{ base: "100%", lg: "50%" }}>
+            <Image alt="" src={"/strat1.jpeg"} borderRadius="10px" />
+          </Box>
         </Flex>
 
-        <Flex flexDirection="column" gap="1.5rem">
-          <Text
-            fontSize={"1.5rem"}
-            color={"gray.600"}
-            fontWeight="600"
-            textAlign={{ base: "start", lg: "center" }}
-          >
-            Strategic Staffing Solutions:{" "}
-          </Text>
+        <Flex
+          flexDirection={{ base: "column", lg: "row-reverse" }}
+          gap="1.5rem"
+          justifyContent={"space-between"}
+        >
           <Flex
-            justifyContent="space-between"
-            gap="1rem"
-            flexDirection={{ base: "column", lg: "row" }}
+            justifyContent="center"
+            gap={{base:'1rem', lg:"2rem"}}
+            flexDirection={{ base: "column", lg: "column" }}
+            w={{ base: "100%", lg: "50%" }}
           >
             <Text
-              fontSize={"1rem"}
+              fontSize={"1.5rem"}
               color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
+              fontWeight="600"
               textAlign={"start"}
             >
-              Finding the right talent is critical for organizational success.
-              We specialize in staffing for BPM and performance management
-              roles.
+              Strategic Staffing Solutions:
             </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              Our extensive network connects skilled professionals with
+            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
+              - Finding the right talent is critical for organizational success.
+              <br />- We specialize in staffing for BPM and performance management
+              roles. <br />- Our extensive network connects skilled professionals with
               companies seeking expertise in process optimization, data
               analysis, and performance measurement.
             </Text>
           </Flex>
+          <Box w={{ base: "100%", lg: "50%" }}>
+            <Image alt="" src={"/strat2.jpeg"} borderRadius="10px" />
+          </Box>
         </Flex>
 
-        <Flex flexDirection="column" gap="1.5rem">
-          <Text
-            fontSize={"1.5rem"}
-            color={"gray.600"}
-            fontWeight="600"
-            textAlign={{ base: "start", lg: "center" }}
-          >
-            Outsourcing Services:
-          </Text>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          gap="1.5rem"
+          justifyContent={"space-between"}
+        >
           <Flex
-            justifyContent="space-between"
-            gap="1rem"
-            flexDirection={{ base: "column", lg: "row" }}
+            justifyContent="center"
+            gap={{base:'1rem', lg:"2rem"}}
+            flexDirection={{ base: "column", lg: "column" }}
+            w={{ base: "100%", lg: "50%" }}
           >
             <Text
-              fontSize={"1rem"}
+              fontSize={"1.5rem"}
               color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
+              fontWeight="600"
               textAlign={"start"}
             >
-              Process and performance management analysts play a pivotal role in
-              driving organizational success.
+              Outsourcing Services:
             </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              We provide outsourced analysts who bring fresh perspectives,
-              data-driven insights, and best practices to your business.
-            </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              Our seasoned analysts provide fresh insights and actionable
-              recommendations for your staffing needs when it comes to BPM and
-              Performance Management Staffing.
-            </Text>
-            <Text
-              fontSize={"1rem"}
-              color={"gray.600"}
-              w={{ base: "100%", lg: "40%" }}
-              textAlign={"start"}
-            >
-              Whether you need short-term project support or long-term strategic
-              guidance, our analysts are here to elevate your performance.
+            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
+              - Process and performance management analysts play a pivotal role in
+              driving organizational success. <br />- We provide outsourced analysts who
+              bring fresh perspectives, data-driven insights, and best practices
+              to your business. <br />- Our seasoned analysts provide fresh insights and
+              actionable recommendations for your staffing needs when it comes
+              to BPM and Performance Management Staffing. <br />- Whether you need
+              short-term project support or long-term strategic guidance, our
+              analysts are here to elevate your performance.
             </Text>
           </Flex>
+          <Box w={{ base: "100%", lg: "50%" }}>
+            <Image alt="" src={"/strat3.jpeg"} borderRadius="10px" />
+          </Box>
         </Flex>
+
       </VStack>
     </Flex>
   );

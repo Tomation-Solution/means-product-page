@@ -15,7 +15,7 @@ export function About() {
   return (
     <Flex
       px={"5%"}
-      pt={{ base: "10%", lg: "5%" }}
+      pt={{ base: "10%", lg: "10%" }}
       pb={{ base: "10%", lg: "10%" }}
       gap={{ base: "10px", lg: "15px", xl: "20px" }}
       direction={"column"}
@@ -26,17 +26,19 @@ export function About() {
       <Text
         fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
         fontWeight={"bold"}
-        color={{ base:'gray.800', lg:"gray.700"}}
+        color={{ base: "gray.800", lg: "gray.700" }}
       >
         OUR MISSION
       </Text>
       <Text
         fontSize={"1rem"}
-        color={{ base:'gray.800', lg:"gray.700"}}
+        color={{ base: "gray.800", lg: "gray.700" }}
         maxW={{ base: "100%", lg: "50%" }}
+        // width='fit-content'
+        display="inline-block"
         textAlign={"center"}
-        className='textBg2'
-        p={'1'}
+        className="textBg2"
+        p={"1"}
       >
         Our mission is to{" "}
         <b>

@@ -15,7 +15,7 @@ import { Heading } from "../../lib/components/Heading";
 export function Hero() {
   return (
     <>
-      <Flex
+      {/* <Flex
         px={"5%"}
         pt={{ base: "20%", lg: "10%" }}
         pb={{ base: "10%", lg: "17%" }}
@@ -31,7 +31,7 @@ export function Hero() {
             w={{ base: "80%", lg: "50%" }}
             textAlign="center"
             fontWeight="500"
-            className='textBg'
+            className="textBg"
           >
             We are dedicated to transforming organizations through strategic
             training, staffing, and outsourcing solutions.
@@ -40,26 +40,109 @@ export function Hero() {
             Request a demo!
           </Button>
         </Flex>
+      </Flex> */}
+
+      <Flex
+        px={"5%"}
+        pt={{ base: "20%", lg: "10%" }}
+        pb={"5%"}
+        gap={{ base: "50px", lg: "90px", xl: "110px" }}
+        direction={"column"}
+        h={{ lg: "600px" }}
+      >
+        <Flex
+          direction={{ base: "column-reverse", lg: "row" }}
+          align={{ base: "flex-start", lg: "center" }}
+          justify={"space-between"}
+          gap={{ base: 10, lg: 0 }}
+        >
+          <Flex
+            direction={"column"}
+            maxW={{ base: "100%", lg: "40%" }}
+            gap={"1rem"}
+            mt={{ base: "35%", lg: "0" }}
+            alignItems={{base:'center', lg:'start'}}
+          >
+            <Text
+              fontSize={"2.2rem"}
+              align={{ base: "center", lg: "start" }}
+              color={"gray.700"}
+              fontWeight="500"
+            >
+              We are dedicated to transforming organizations through strategic
+              training, staffing, and outsourcing solutions.
+            </Text>
+            <Button maxW={"55%"} variant={"cta"}>
+              Request a demo!
+            </Button>
+          </Flex>
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            position="relative"
+            direction={"column"}
+            maxW={{ base: "100%", lg: "50%" }}
+          >
+            <Box>
+              <Image
+                alt=""
+                src={"/pic1.jpeg"}
+                w={{ sm: "100%", lg: "80%" }}
+                borderRadius="10px"
+                boxShadow={"0 20px 25px rgba(0, 0, 0, 0.5)"}
+              />
+            </Box>
+            <Box
+              top="75%"
+              left={{ base: "9%", lg: "30%" }}
+              zIndex="35"
+              position="absolute"
+            >
+              <Image
+                alt=""
+                src={"/pic2.jpeg"}
+                boxShadow={"0 20px 25px rgba(0, 0, 0, 0.5)"}
+                w={{ base: "80%", lg: "100%" }}
+                boxSize={{ base: "90%", lg: "none" }}
+                borderRadius="10px"
+              />
+            </Box>
+          </Flex>
+        </Flex>
       </Flex>
 
-      <Box pt={{ base: "5%", lg: "5%" }} pb={"5%"} px={"5%"}>
+      <Box pt={{ base: "10%", lg: "10%" }} pb={"8%"} px={"5%"}>
         <Text
           fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
           fontWeight={"bold"}
-          color={"gray.700"}
-          align="center"
-          pb="1.5rem"
+          color={"black"}
+          align={{ base: "center", lg: "start" }}
+          pb={{base:'.5rem', lg:"1.5rem"}}
+          maxW={{ base: "100%", lg: "60%" }}
         >
-          OUR SERVICES
+          Let us guide you towards operational excellence and sustainable
+          growth.
         </Text>
         <Flex
-          px={"5%"}
           gap={"2rem"}
           align={"center"}
           flexWrap={"wrap"}
-          justifyContent="center"
+          justifyContent="flex-start"
           flexDirection={{ base: "column", lg: "row" }}
         >
+          <Flex justifyContent="flex-start" alignItems="start" mt={"2rem"}>
+            <Text
+              fontSize={"1rem"}
+              color={"gray.600"}
+              maxW={{ base: "100%", lg: "50%" }}
+              textAlign={{ base: "center", lg: "start" }}
+            >
+              At The Means Solutions Consulting, we are passionate about
+              empowering organizations to achieve operational excellence through
+              effective Business Process Management (BPM) and Performance
+              Management training and staffing services.
+            </Text>
+          </Flex>
           <Flex
             bg="primary.sub___"
             px={"1rem"}
@@ -97,21 +180,6 @@ export function Hero() {
               Performance Management
             </Text>
           </Flex>
-        </Flex>
-        <Flex justifyContent="center" alignItems="center" mt={"3rem"}>
-          <Text
-            fontSize={"1rem"}
-            color={"gray.600"}
-            maxW={{ base: "100%", lg: "50%" }}
-            textAlign={"center"}
-          >
-            Let us guide you towards operational excellence and sustainable
-            growth. <br />
-            At The Means Solutions Consulting, we are passionate about
-            empowering organizations to achieve operational excellence through
-            effective Business Process Management (BPM) and Performance
-            Management training and staffing services.
-          </Text>
         </Flex>
       </Box>
     </>

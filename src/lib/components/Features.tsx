@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Text, Grid, GridItem, Box } from "@chakra-ui/react";
+import { Flex, Text, Grid, GridItem, Box, Image } from "@chakra-ui/react";
 import {
   LampCharge,
   TickCircle,
@@ -14,39 +14,39 @@ import { Icon } from "@chakra-ui/icons";
 interface FeatureCardProps {
   name: string;
   desc?: string | undefined;
-  icon: any;
+  img: string;
 }
 
 export function Features() {
   const features: FeatureCardProps[] = [
     {
       name: "EXPERTISE",
-      icon: LampCharge as any,
+      img: '/expertise.jpeg',
       desc: " Our training and staffing team comprises seasoned professionals with hands-on experience in BPM, performance measurement, and staffing.",
     },
     {
       name: "CUSTOM SOLUTIONS",
-      icon: Designtools as any,
+      img: '/custom.jpeg',
       desc: "We tailor our services to meet your unique needs, ensuring practical, actionable results.",
     },
     {
       name: "RESULT DRIVEN",
-      icon: TickCircle as any,
+      img: '/result.jpeg',
       desc: "We focus on tangible outcomes—taking the burden of BPM and Performance Management staffing and training needs totally off your desk towards boosting your bottom line. ",
     },
     {
       name: "COLLABORATION",
-      icon: People as any,
+      img:'/collaboration.jpeg',
       desc: "We believe in partnerships. Let's work together to achieve your organizational goals.",
     },
     {
       name: "EVENTS & VIRTUAL MEETINGS",
-      icon: CalendarTick as any,
+      img: '/virtual.jpeg',
       desc: "Let's work together to tailor solutions that align with your unique goals.",
     },
     {
       name: "GLOBAL PERSPECTIVE",
-      icon: Global as any,
+      img: '/map.jpeg',
       desc: "Our team brings diverse experiences and a global mindset to every project.",
     },
   ];
@@ -62,7 +62,7 @@ export function Features() {
         WHY CHOOSE THE MEANS SOLUTIONS?
       </Text>
       <Grid
-        px={{ base: "5%", lg: "17.5%" }}
+        px={{ base: "5%", lg: "8%" }}
         py={{ base: "10%", lg: "5%" }}
         templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         gap={"50px"}
@@ -81,20 +81,17 @@ function FeatureCard(props: FeatureCardProps) {
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
-      align={{ base: "flex-start", lg: "center" }}
+      align={{ base: "flex-start", lg: "flex-start" }}
       gap={"1rem"}
     >
-      <Flex
-        borderColor={"secondary.sub__"}
-        borderRadius={"100%"}
-        borderWidth={"3px"}
-        p={"2rem"}
-        justify={"center"}
-        align={"center"}
-      >
-        <Icon as={props.icon} color={"secondary.sub"} fontSize={"3rem"} />
-      </Flex>
-      <Flex direction={"column"} align={"flex-start"}>
+      <Image
+        alt=""
+        src={props.img}
+        w={{lg:"200px"}}
+        h={{lg:"170px"}}
+        borderRadius='10px'
+      />
+      <Flex direction={"column"} align={"flex-start"} gap='10px'>
         <Text fontWeight={"bold"} color={"gray.700"}>
           {props.name}
         </Text>
