@@ -26,5 +26,9 @@
 }
 
 .textBg2 {
-  background-color: rgba(196, 195, 193, 0.6);
+  background-color: rgba(213, 212, 210, 0.45);
+}
+
+.textBg3 {
+  background-color: rgba(75, 75, 74, 0.45);
 }

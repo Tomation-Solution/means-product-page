@@ -11,37 +11,12 @@ import {
 } from "iconsax-react";
 import { Icon } from "@chakra-ui/icons";
 import { Heading } from "../../lib/components/Heading";
+import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
 
 export function Hero() {
   return (
     <>
-      {/* <Flex
-        px={"5%"}
-        pt={{ base: "20%", lg: "10%" }}
-        pb={{ base: "10%", lg: "17%" }}
-        gap={{ base: "50px", lg: "90px", xl: "110px" }}
-        direction={"column"}
-        className="headerBg"
-      >
-        <Flex direction={"column"} gap={"2rem"} alignItems="center">
-          <Heading text={"The Means Solutions"} />
-          <Text
-            fontSize={{ base: "1.2rem", lg: "1.3rem" }}
-            color={{ base: "white", lg: "white" }}
-            w={{ base: "80%", lg: "50%" }}
-            textAlign="center"
-            fontWeight="500"
-            className="textBg"
-          >
-            We are dedicated to transforming organizations through strategic
-            training, staffing, and outsourcing solutions.
-          </Text>
-          <Button maxW={"55%"} variant={"cta"}>
-            Request a demo!
-          </Button>
-        </Flex>
-      </Flex> */}
-
       <Flex
         px={"5%"}
         pt={{ base: "20%", lg: "10%" }}
@@ -52,7 +27,7 @@ export function Hero() {
       >
         <Flex
           direction={{ base: "column-reverse", lg: "row" }}
-          align={{ base: "flex-start", lg: "center" }}
+          align={{ base: "flex-start", lg: "flex-start" }}
           justify={"space-between"}
           gap={{ base: 10, lg: 0 }}
         >
@@ -61,20 +36,30 @@ export function Hero() {
             maxW={{ base: "100%", lg: "40%" }}
             gap={"1rem"}
             mt={{ base: "35%", lg: "0" }}
-            alignItems={{base:'center', lg:'start'}}
+            alignItems={{ base: "center", lg: "start" }}
           >
-            <Text
-              fontSize={"2.2rem"}
-              align={{ base: "center", lg: "start" }}
-              color={"gray.700"}
-              fontWeight="500"
-            >
-              We are dedicated to transforming organizations through strategic
-              training, staffing, and outsourcing solutions.
-            </Text>
-            <Button maxW={"55%"} variant={"cta"}>
-              Request a demo!
-            </Button>
+            <TypeAnimation
+              preRenderFirstString={true}
+              sequence={[
+                500,
+                "We are dedicated to transforming organizations through strategic training, staffing, and outsourcing solutions.",
+                5000,
+                "Business Process Management Career Development Program",
+                5000,
+                "Let's help you through your staffing needs for your Business Process Management Workforce",
+                500,
+              ]}
+              speed={50}
+              style={{ fontSize: "2.3rem", fontWeight: "600", color: "black" }}
+              repeat={Infinity}
+            />
+            <Box w="100%">
+              <Link href="/register">
+                <Button maxW={"55%"} variant={"cta"} px="10px">
+                  Register For a Training
+                </Button>
+              </Link>
+            </Box>
           </Flex>
           <Flex
             justifyContent="center"
@@ -111,14 +96,14 @@ export function Hero() {
         </Flex>
       </Flex>
 
-      <Box pt={{ base: "10%", lg: "10%" }} pb={"8%"} px={"5%"}>
+      <Box pt={{ base: "10%", lg: "10%", xl: "15%" }} pb={"8%"} px={"5%"}>
         <Text
-          fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
+          fontSize={{ base: "2.5rem", lg: "4rem", xl: "4.6rem" }}
           fontWeight={"bold"}
           color={"black"}
-          align={{ base: "center", lg: "start" }}
-          pb={{base:'.5rem', lg:"1.5rem"}}
-          maxW={{ base: "100%", lg: "60%" }}
+          textAlign={{ base: "center", lg: "center" }}
+          pb={{ base: ".5rem", lg: "1.5rem" }}
+          maxW={{ base: "100%", lg: "100%" }}
         >
           Let us guide you towards operational excellence and sustainable
           growth.
@@ -127,15 +112,15 @@ export function Hero() {
           gap={"2rem"}
           align={"center"}
           flexWrap={"wrap"}
-          justifyContent="flex-start"
+          justifyContent="center"
           flexDirection={{ base: "column", lg: "row" }}
         >
-          <Flex justifyContent="flex-start" alignItems="start" mt={"2rem"}>
+          <Flex justifyContent="center" alignItems="center" mt={"2rem"}>
             <Text
-              fontSize={"1rem"}
+              fontSize={"1.2rem"}
               color={"gray.600"}
               maxW={{ base: "100%", lg: "50%" }}
-              textAlign={{ base: "center", lg: "start" }}
+              textAlign={{ base: "center", lg: "center" }}
             >
               At The Means Solutions Consulting, we are passionate about
               empowering organizations to achieve operational excellence through
@@ -160,6 +145,24 @@ export function Hero() {
             />
             <Text fontSize={{ base: ".8rem", lg: ".9rem" }} fontWeight={"bold"}>
               Business Process Management
+            </Text>
+          </Flex>
+          <Flex
+            bg="primary.sub___"
+            px={"1rem"}
+            py={".7rem"}
+            gap={".7rem"}
+            align={"center"}
+            borderRadius={"10px"}
+            boxShadow={"xl"}
+          >
+            <Icon
+              as={People as any}
+              color={"secondary.sub_"}
+              fontSize={"1.5rem"}
+            />
+            <Text fontSize={{ base: ".8rem", lg: ".9rem" }} fontWeight={"bold"}>
+              Staffing
             </Text>
           </Flex>
           <Flex
