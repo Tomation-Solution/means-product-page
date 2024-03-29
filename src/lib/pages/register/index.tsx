@@ -64,10 +64,10 @@ function Register() {
           status: "success",
           description: result || "Registration Successful",
         });
-        name = ''
-        telephone = ''
-        path = ''
-        email = ''
+        setName('')
+        setPath('')
+        setTelephone('')
+        setEmail('')
       }
     }
   }
