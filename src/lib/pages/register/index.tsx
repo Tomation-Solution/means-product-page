@@ -45,7 +45,7 @@ function Register() {
       const data = { name, email, telephone, path };
       setLoader("Loading...");
       const res = await Form.register(data);
-      if (res.error) {
+      if (res && (res as AppError).error) {
         setLoader("Submit");
         toast({
           status: "error",
