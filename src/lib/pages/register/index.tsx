@@ -10,9 +10,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { Form } from "../../logic/utils/form";
-import { AppError } from "../../types";
 import { useToast } from "@chakra-ui/react";
+import addData from "../../logic/firebase/db";
+import { v4 as uuid } from "uuid";
 
 export function useAppToast() {
   return useToast({
@@ -31,6 +31,7 @@ function Register() {
   const [loader, setLoader] = useState("Submit");
 
   const toast = useAppToast();
+        const id = uuid();
 
   async function handleRegistration(
     event:
@@ -44,19 +45,29 @@ function Register() {
     } else {
       const data = { name, email, telephone, path };
       setLoader("Loading...");
-      const res = await Form.register(data);
-      if (res && (res as AppError).error) {
+      const { result, error } = await addData(
+        "training-registration",
+        id,
+        data
+      );
+
+      if (error) {
         setLoader("Submit");
         toast({
           status: "error",
           description: "An error occurred",
         });
+        return console.log(error);
       } else {
-        setLoader("SUbmit");
+        setLoader("Submit");
         toast({
           status: "success",
-          description: "Registration Successful",
+          description: result || "Registration Successful",
         });
+        name = ''
+        telephone = ''
+        path = ''
+        email = ''
       }
     }
   }
@@ -155,10 +166,10 @@ function Register() {
         <Text color="red.400">{err}</Text>
       </Flex>
       {error &&
-        name === "" &&
-        path === "" &&
-        telephone === "" &&
-        email === "" && (
+        name === "" ||
+        path === "" ||
+        telephone === "" ||
+        email === "" || (
           <Text color="red.400">Please ensure you fill all fields</Text>
         )}
       <Button

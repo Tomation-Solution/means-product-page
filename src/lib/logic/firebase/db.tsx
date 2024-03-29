@@ -1,38 +1,21 @@
 import {
-  getDoc,
   setDoc,
   doc,
-  Firestore,
-  Timestamp
 } from "firebase/firestore";
-import { ResultWithData } from "../../types";
+import { db } from "./index";
 
 
-export class Database {
-  constructor(
-    private readonly db: Firestore,
-    private readonly _collection: string
-  ) {}
+export default async function addData(collection: string, id: string, data: any) {
+  let result = null;
+  let error = null;
 
-  upsert = async <T,>(data: T, ...path: string[]): ResultWithData<null> => {
-    try {
-      const _doc = await getDoc(doc(this.db, this._collection, ...path));
+  try {
+    result = await setDoc(doc(db, collection, id), data, {
+      merge: true,
+    });
+  } catch (e) {
+    error = e;
+  }
 
-      const timeNow = Timestamp.fromDate(new Date());
-
-      const timestamp = _doc.exists()
-        ? { updatedAt: timeNow }
-        : { createdAt: timeNow };
-
-      await setDoc(
-        doc(this.db, this._collection, ...path),
-        { ...data, ...timestamp },
-        { merge: true }
-      );
-
-      return null;
-    } catch (e) {
-      return { error: "an error occurred!" };
-    }
-  };
+  return { result, error };
 }
