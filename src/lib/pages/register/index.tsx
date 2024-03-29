@@ -9,24 +9,71 @@ import {
   FormLabel,
   Text,
 } from "@chakra-ui/react";
-import { ChangeEvent, Key, useState, useEffect } from "react";
+import { useState } from "react";
+import { Form } from "../../logic/utils/form";
+import { AppError } from "../../types";
+import { useToast } from "@chakra-ui/react";
 
+export function useAppToast() {
+  return useToast({
+    position: "top-right",
+    isClosable: true,
+  });
+}
 
 function Register() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [telephone, setTelephone] = useState('');
-    const [path, setPath] = useState("");
-    
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [path, setPath] = useState("");
+  const [error, setError] = useState(false);
+  const [err, setErr] = useState("");
+  const [loader, setLoader] = useState("Submit");
+
+  const toast = useAppToast();
+
+  async function handleRegistration(
+    event:
+      | React.FormEvent<HTMLFormElement>
+      | React.MouseEvent<HTMLButtonElement>
+  ) {
+    event.preventDefault();
+    console.log("clicked");
+    if (name === "" || email === "" || telephone === "" || path === "") {
+      return setError(true);
+    } else {
+      const data = { name, email, telephone, path };
+      setLoader("Loading...");
+      const res = await Form.register(data);
+      if (res.error) {
+        setLoader("Submit");
+        toast({
+          status: "error",
+          description: "An error occurred",
+        });
+      } else {
+        setLoader("SUbmit");
+        toast({
+          status: "success",
+          description: "Registration Successful",
+        });
+      }
+    }
+  }
+
   return (
-    <Box pt={{ base: "30%", lg: "10%" }} px="5%" h={{base:'87vh', lg:'100%'}}>
+    <Box
+      pt={{ base: "30%", lg: "10%" }}
+      px="5%"
+      h={{ base: "87vh", lg: "100%" }}
+    >
       <Text
         fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
         fontWeight={"bold"}
         color={"gray.700"}
         textAlign="center"
       >
-       BUSINESS REGISTRATION
+        BUSINESS REGISTRATION
       </Text>
       <Flex
         flexDirection="column"
@@ -105,9 +152,24 @@ function Register() {
             bg={"#F4F6F6"}
           />
         </FormControl>
+        <Text color="red.400">{err}</Text>
       </Flex>
-      <Button variant={"main"} maxW={{lg:"320px"}} w={"100%"} mt={{base:'5%', lg:'3%'}} mb={{ base:'20%',lg:'5%'}}>
-        Submit
+      {error &&
+        name === "" &&
+        path === "" &&
+        telephone === "" &&
+        email === "" && (
+          <Text color="red.400">Please ensure you fill all fields</Text>
+        )}
+      <Button
+        variant={"main"}
+        maxW={{ lg: "320px" }}
+        w={"100%"}
+        mt={{ base: "5%", lg: "3%" }}
+        mb={{ base: "20%", lg: "5%" }}
+        onClick={handleRegistration}
+      >
+        {loader}
       </Button>
     </Box>
   );
