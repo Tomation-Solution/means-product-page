@@ -77,7 +77,7 @@ export function Header() {
     </Flex>
   );
 }
-R
+
 function HeaderMenu() {
   const router = useRouter();
 
