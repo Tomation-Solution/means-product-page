@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Text, VStack, Box, Image } from "@chakra-ui/react";
+import { Flex, Text, VStack, Box, Image, Button } from "@chakra-ui/react";
 import {
   Gallery,
   Messages3,
@@ -10,6 +10,7 @@ import {
   Video,
 } from "iconsax-react";
 import { Icon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 export function Expertise() {
   return (
@@ -35,7 +36,7 @@ export function Expertise() {
         >
           <Flex
             justifyContent="center"
-            gap={{base:'1rem', lg:"2rem"}}
+            gap={{ base: "1rem", lg: "1.5rem" }}
             flexDirection={{ base: "column", lg: "column" }}
             w={{ base: "100%", lg: "50%" }}
           >
@@ -47,17 +48,24 @@ export function Expertise() {
             >
               Training and Development:
             </Text>
-            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
-             -  Our customized training programs empower professionals with
-              practical skills in BPM and performance management.<br />- We believe in
-              bridging theory and practice, ensuring that your team can drive
-              efficiency and innovation.<br />- We offer customized training programs
-              that cater to diverse industries and roles.<br />- Our expert trainers
-              deliver practical insights on BPM, performance measurement, and
-              continuous improvement. Whether you&apos;re an executive, manager,
-              or frontline employee, our training ensures you stay ahead in
-              today&apos;s dynamic business landscape.
+            <Text fontSize={"1.1rem"} color={"gray.600"} textAlign={"start"}>
+              - Our customized training programs empower professionals with
+              practical skills in BPM and performance management.
+              <br />- We believe in bridging theory and practice, ensuring that
+              your team can drive efficiency and innovation.
+              <br />- We offer customized training programs that cater to
+              diverse industries and roles.
+              <br />- Our expert trainers deliver practical insights on BPM,
+              performance measurement, and continuous improvement. Whether
+              you&apos;re an executive, manager, or frontline employee, our
+              training ensures you stay ahead in today&apos;s dynamic business
+              landscape.
             </Text>
+            <Link href="/register">
+              <Button maxW={"55%"} variant={"cta"}>
+                Register For a Training
+              </Button>
+            </Link>
           </Flex>
           <Box w={{ base: "100%", lg: "50%" }}>
             <Image alt="" src={"/strat1.jpeg"} borderRadius="10px" />
@@ -71,7 +79,7 @@ export function Expertise() {
         >
           <Flex
             justifyContent="center"
-            gap={{base:'1rem', lg:"2rem"}}
+            gap={{ base: "1rem", lg: "1.5rem" }}
             flexDirection={{ base: "column", lg: "column" }}
             w={{ base: "100%", lg: "50%" }}
           >
@@ -83,13 +91,18 @@ export function Expertise() {
             >
               Strategic Staffing Solutions:
             </Text>
-            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
+            <Text fontSize={"1.1rem"} color={"gray.600"} textAlign={"start"}>
               - Finding the right talent is critical for organizational success.
-              <br />- We specialize in staffing for BPM and performance management
-              roles. <br />- Our extensive network connects skilled professionals with
-              companies seeking expertise in process optimization, data
-              analysis, and performance measurement.
+              <br />- We specialize in staffing for BPM and performance
+              management roles. <br />- Our extensive network connects skilled
+              professionals with companies seeking expertise in process
+              optimization, data analysis, and performance measurement.
             </Text>
+            <Link href="#contact">
+              <Button maxW={"55%"} variant={"cta"}>
+                Contact Us
+              </Button>
+            </Link>
           </Flex>
           <Box w={{ base: "100%", lg: "50%" }}>
             <Image alt="" src={"/strat2.jpeg"} borderRadius="10px" />
@@ -103,7 +116,7 @@ export function Expertise() {
         >
           <Flex
             justifyContent="center"
-            gap={{base:'1rem', lg:"2rem"}}
+            gap={{ base: "1rem", lg: "1.5rem" }}
             flexDirection={{ base: "column", lg: "column" }}
             w={{ base: "100%", lg: "50%" }}
           >
@@ -115,22 +128,27 @@ export function Expertise() {
             >
               Outsourcing Services:
             </Text>
-            <Text fontSize={"1rem"} color={"gray.600"} textAlign={"start"}>
-              - Process and performance management analysts play a pivotal role in
-              driving organizational success. <br />- We provide outsourced analysts who
-              bring fresh perspectives, data-driven insights, and best practices
-              to your business. <br />- Our seasoned analysts provide fresh insights and
-              actionable recommendations for your staffing needs when it comes
-              to BPM and Performance Management Staffing. <br />- Whether you need
-              short-term project support or long-term strategic guidance, our
-              analysts are here to elevate your performance.
+            <Text fontSize={"1.1rem"} color={"gray.600"} textAlign={"start"}>
+              - Process and performance management analysts play a pivotal role
+              in driving organizational success. <br />- We provide outsourced
+              analysts who bring fresh perspectives, data-driven insights, and
+              best practices to your business. <br />- Our seasoned analysts
+              provide fresh insights and actionable recommendations for your
+              staffing needs when it comes to BPM and Performance Management
+              Staffing. <br />- Whether you need short-term project support or
+              long-term strategic guidance, our analysts are here to elevate
+              your performance.
             </Text>
+            <Link href="#contact">
+              <Button maxW={"55%"} variant={"cta"}>
+                Contact Us
+              </Button>
+            </Link>
           </Flex>
           <Box w={{ base: "100%", lg: "50%" }}>
             <Image alt="" src={"/strat3.jpeg"} borderRadius="10px" />
           </Box>
         </Flex>
-
       </VStack>
     </Flex>
   );

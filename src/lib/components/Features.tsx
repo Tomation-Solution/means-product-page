@@ -21,32 +21,32 @@ export function Features() {
   const features: FeatureCardProps[] = [
     {
       name: "EXPERTISE",
-      img: '/expertise.jpeg',
+      img: "/expertise.jpeg",
       desc: " Our training and staffing team comprises seasoned professionals with hands-on experience in BPM, performance measurement, and staffing.",
     },
     {
       name: "CUSTOM SOLUTIONS",
-      img: '/custom.jpeg',
+      img: "/custom.jpeg",
       desc: "We tailor our services to meet your unique needs, ensuring practical, actionable results.",
     },
     {
       name: "RESULT DRIVEN",
-      img: '/result.jpeg',
+      img: "/result.jpeg",
       desc: "We focus on tangible outcomes—taking the burden of BPM and Performance Management staffing and training needs totally off your desk towards boosting your bottom line. ",
     },
     {
       name: "COLLABORATION",
-      img:'/collaboration.jpeg',
+      img: "/collaboration.jpeg",
       desc: "We believe in partnerships. Let's work together to achieve your organizational goals.",
     },
     {
       name: "EVENTS & VIRTUAL MEETINGS",
-      img: '/virtual.jpeg',
+      img: "/virtual.jpeg",
       desc: "Let's work together to tailor solutions that align with your unique goals.",
     },
     {
       name: "GLOBAL PERSPECTIVE",
-      img: '/map.jpeg',
+      img: "/map.jpeg",
       desc: "Our team brings diverse experiences and a global mindset to every project.",
     },
   ];
@@ -81,17 +81,33 @@ function FeatureCard(props: FeatureCardProps) {
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
-      align={{ base: "flex-start", lg: "flex-start" }}
+      align={{ base: "flex-start", lg: "center" }}
       gap={"1rem"}
     >
-      <Image
-        alt=""
-        src={props.img}
-        w={{lg:"200px"}}
-        h={{lg:"170px"}}
-        borderRadius='10px'
-      />
-      <Flex direction={"column"} align={"flex-start"} gap='10px'>
+      <Box position="relative" zIndex={40}>
+        <Box w={{ lg: "200px" }} h={{ lg: "170px" }} zIndex={4} position='relative'>
+          <Image
+            alt=""
+            src={props.img}
+            w={{ lg: "100%" }}
+            h={{ lg: "100%" }}
+            borderRadius="10px"
+            zIndex={4}
+          />
+        </Box>
+        <Box
+          borderWidth="4px"
+          borderColor="primary.sub"
+          w={{ lg: "200px" }}
+          h={{ lg: "170px" }}
+          borderRadius="10px"
+          position="absolute"
+          zIndex={1}
+          top="5%"
+          right="5%"
+        ></Box>
+      </Box>
+      <Flex direction={"column"} align={"flex-start"} gap="10px">
         <Text fontWeight={"bold"} color={"gray.700"}>
           {props.name}
         </Text>

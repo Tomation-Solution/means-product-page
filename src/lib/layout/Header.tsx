@@ -30,7 +30,7 @@ export function Header() {
       >
         <Link href={"/"}>
           <Flex cursor={"pointer"} align={"center"} gap={".7rem"}>
-            <Image alt={"means logo"} src={"/log.jpeg"} w={"5.5rem"}/>
+            <Image alt={"means logo"} src={"/log.jpeg"} w={"5.5rem"} />
             {/* <Text fontSize={"1.6rem"} fontWeight={"bold"} color={"primary.sub"}>
               MEANS
             </Text> */}
@@ -38,11 +38,16 @@ export function Header() {
         </Link>
         <Flex gap={"1rem"} align={"center"}>
           <Button variant={"sub"} display={{ base: "none", lg: "flex" }}>
-            Get Started
+            Post a Job
           </Button>
+            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
+              Vacancy
+            </Button>
+          <Link href='#contact'>
           <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
-            Request a demo
+            Contact Us
           </Button>
+          </Link>
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
             display={{ base: "flex", lg: "none" }}
@@ -80,11 +85,16 @@ function HeaderMenu() {
       boxShadow={"2xl"}
     >
       <Button maxW={"320px"} w={"100%"} variant={"sub"}>
-        Get Started
+        Post a Job
       </Button>
       <Button variant={"main"} maxW={"320px"} w={"100%"}>
-        Request a demo
+        Vacancy
       </Button>
+      <Link href="#contact">
+        <Button variant={"main"} maxW={"320px"} w={"100%"}>
+          Contact Us
+        </Button>
+      </Link>
     </Flex>
   );
 }
