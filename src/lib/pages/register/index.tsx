@@ -12,7 +12,6 @@ import {
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import addData from "../../logic/firebase/db";
-import { v4 as uuid } from "uuid";
 
 export function useAppToast() {
   return useToast({
@@ -27,11 +26,9 @@ function Register() {
   const [telephone, setTelephone] = useState("");
   const [path, setPath] = useState("");
   const [error, setError] = useState(false);
-  const [err, setErr] = useState("");
   const [loader, setLoader] = useState("Submit");
 
   const toast = useAppToast();
-        const id = uuid();
 
   async function handleRegistration(
     event:
@@ -47,7 +44,7 @@ function Register() {
       setLoader("Loading...");
       const { result, error } = await addData(
         "training-registration",
-        id,
+        email,
         data
       );
 
@@ -163,7 +160,6 @@ function Register() {
             bg={"#F4F6F6"}
           />
         </FormControl>
-        <Text color="red.400">{err}</Text>
       </Flex>
       {error &&
         name === "" ||
