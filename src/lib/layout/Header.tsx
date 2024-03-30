@@ -77,7 +77,7 @@ export function Header() {
     </Flex>
   );
 }
-
+R
 function HeaderMenu() {
   const router = useRouter();
 
@@ -99,16 +99,16 @@ function HeaderMenu() {
       <Button variant={"main"} maxW={"320px"} w={"100%"}>
         Vacancy
       </Button>
+        <Button variant={"main"} maxW={"320px"} w={"100%"}>
       <Link href="#contact">
-        <Button variant={"main"} maxW={"320px"} w={"100%"}>
           Contact Us
-        </Button>
       </Link>
-      <Link href="/register">
+        </Button>
         <Button variant={"main"} maxW={"320px"} w={"100%"}>
+      <Link href="/register">
           Register for a Training
-        </Button>
       </Link>
+        </Button>
     </Flex>
   );
 }

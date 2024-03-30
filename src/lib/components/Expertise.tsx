@@ -28,10 +28,10 @@ export function Expertise() {
       >
         OUR EXPERTISE
       </Text>
-      <VStack gap={{ base: "3.5rem", lg: "5.7rem" }}>
+      <VStack gap={{ base: "3.5rem", lg: "6rem" }}>
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
-          gap="2rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex
@@ -74,7 +74,7 @@ export function Expertise() {
 
         <Flex
           flexDirection={{ base: "column", lg: "row-reverse" }}
-          gap="2rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex
@@ -111,7 +111,7 @@ export function Expertise() {
 
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
-          gap="2rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex

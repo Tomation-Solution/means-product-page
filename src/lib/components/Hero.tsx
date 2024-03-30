@@ -35,7 +35,7 @@ export function Hero() {
             direction={"column"}
             maxW={{ base: "100%", lg: "40%" }}
             gap={"1rem"}
-            mt={{ base: "35%", lg: "0" }}
+            mt={{ base: "35%", lg: "10%" }}
             alignItems={{ base: "center", lg: "start" }}
           >
             <TypeAnimation
@@ -96,7 +96,7 @@ export function Hero() {
         </Flex>
       </Flex>
 
-      <Box pt={{ base: "10%", lg: "14%", xl: "18%" }} pb={"8%"} px={"5%"}>
+      <Box pt={{ base: "10%", lg: "14%", xl: "18%", '2xl': '26%' }} pb={"8%"} px={"5%"}>
         <Text
           fontSize={{ base: "2.5rem", lg: "4rem", xl: "4.6rem" }}
           fontWeight={"bold"}
