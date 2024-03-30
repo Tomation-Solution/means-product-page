@@ -27,7 +27,7 @@ export function Hero() {
       >
         <Flex
           direction={{ base: "column-reverse", lg: "row" }}
-          align={{ base: "flex-start", lg: "flex-start" }}
+          align={{ base: "flex-start", lg: "center" }}
           justify={"space-between"}
           gap={{ base: 10, lg: 0 }}
         >
@@ -96,7 +96,7 @@ export function Hero() {
         </Flex>
       </Flex>
 
-      <Box pt={{ base: "10%", lg: "10%", xl: "15%" }} pb={"8%"} px={"5%"}>
+      <Box pt={{ base: "10%", lg: "14%", xl: "18%" }} pb={"8%"} px={"5%"}>
         <Text
           fontSize={{ base: "2.5rem", lg: "4rem", xl: "4.6rem" }}
           fontWeight={"bold"}
