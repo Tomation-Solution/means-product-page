@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Flex, IconButton, Image, Text } from "@chakra-ui/react";
+import { Button, Flex, IconButton, Image, Text, Show } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/icons";
 import Link from "next/link";
 import { CloseSquare, HambergerMenu } from "iconsax-react";
