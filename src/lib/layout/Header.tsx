@@ -10,8 +10,7 @@ import { useRouter } from "next/navigation";
 export function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
+ return (
     <Flex
       direction={"column"}
       position={"fixed"}
@@ -36,27 +35,26 @@ export function Header() {
             </Text> */}
           </Flex>
         </Link>
+<Show above="md">
         <Flex gap={"1rem"} align={"center"}>
-          <Button variant={"sub"} display={{ base: "none", lg: "flex" }}>
+ <Link href="">
             Post a Job
-          </Button>
-          <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
+          </Link>
+<Link target="_blank" rel="noreferrer" href="https://sequentialjobs.com/searchpage">
             Vacancy
-          </Button>
+          </Link>
         </Flex>
+</Show>
 
         <Flex gap={"1rem"} align={"center"}>
+<Show above="md">
           <Link href="#contact">
-            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
-              Contact Us
-            </Button>
-          </Link>
 
-          <Link href='/register'>
-            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
-              Register for a Training
-            </Button>
+              Contact Us
+
           </Link>
+</Show>
+
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
             display={{ base: "flex", lg: "none" }}
@@ -72,6 +70,7 @@ export function Header() {
             }
           />
         </Flex>
+
       </Flex>
       {isOpen && <HeaderMenu />}
     </Flex>
@@ -93,22 +92,18 @@ function HeaderMenu() {
       w={"100%"}
       boxShadow={"2xl"}
     >
-      <Button maxW={"320px"} w={"100%"} variant={"sub"}>
+<Link href="">
         Post a Job
-      </Button>
-      <Button variant={"main"} maxW={"320px"} w={"100%"}>
+      </Link>
+<Link target="_blank" rel="noreferrer" href="https://sequentialjobs.com/searchpage">
         Vacancy
-      </Button>
-        <Button variant={"main"} maxW={"320px"} w={"100%"}>
+      </Link>
+
       <Link href="#contact">
           Contact Us
       </Link>
-        </Button>
-        <Button variant={"main"} maxW={"320px"} w={"100%"}>
-      <Link href="/register">
-          Register for a Training
-      </Link>
-        </Button>
+
+
     </Flex>
   );
 }
