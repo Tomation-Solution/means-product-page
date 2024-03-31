@@ -105,10 +105,6 @@ function HeaderMenu() {
       </Link>
 
 
-      <Link href="/register">
-          Register for a Training
-      </Link>
-
     </Flex>
   );
 }
