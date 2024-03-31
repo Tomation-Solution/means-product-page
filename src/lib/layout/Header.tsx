@@ -10,8 +10,7 @@ import { useRouter } from "next/navigation";
 export function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
+ return (
     <Flex
       direction={"column"}
       position={"fixed"}
@@ -36,6 +35,7 @@ export function Header() {
             </Text> */}
           </Flex>
         </Link>
+<Show above="md">
         <Flex gap={"1rem"} align={"center"}>
  <Link href="">
             Post a Job
@@ -44,19 +44,17 @@ export function Header() {
             Vacancy
           </Link>
         </Flex>
+</Show>
 
         <Flex gap={"1rem"} align={"center"}>
+<Show above="md">
           <Link href="#contact">
 
               Contact Us
 
           </Link>
+</Show>
 
-          <Link href='/register'>
-
-              Register for a Training
-
-          </Link>
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
             display={{ base: "flex", lg: "none" }}
@@ -72,6 +70,7 @@ export function Header() {
             }
           />
         </Flex>
+
       </Flex>
       {isOpen && <HeaderMenu />}
     </Flex>
