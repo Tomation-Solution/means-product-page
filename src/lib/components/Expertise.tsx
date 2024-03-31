@@ -22,16 +22,16 @@ export function Expertise() {
       align={"center"}
     >
       <Text
-        fontSize={{ base: "2rem", lg: "3rem", xl: "3.6rem" }}
+        fontSize={{ base: "2rem", lg: "3.4rem", xl: "3.6rem" }}
         fontWeight={"bold"}
         color={"primary.sub"}
       >
         OUR EXPERTISE
       </Text>
-      <VStack gap={{ base: "3.5rem", lg: "5rem" }}>
+      <VStack gap={{ base: "3.5rem", lg: "6rem" }}>
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
-          gap="1.5rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex
@@ -74,7 +74,7 @@ export function Expertise() {
 
         <Flex
           flexDirection={{ base: "column", lg: "row-reverse" }}
-          gap="1.5rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex
@@ -111,7 +111,7 @@ export function Expertise() {
 
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
-          gap="1.5rem"
+          gap="2.5rem"
           justifyContent={"space-between"}
         >
           <Flex

@@ -14,7 +14,7 @@ import { Icon } from "@chakra-ui/icons";
 export function About() {
   return (
     <Box>
-      <Flex className="missionBg ">
+      <Flex className="missionBg " justifyContent='center' align='center'>
         <Flex
           gap={{ base: "10px", lg: "15px", xl: "20px" }}
           direction={"column"}

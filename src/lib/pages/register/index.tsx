@@ -73,7 +73,7 @@ function Register() {
     <Box
       pt={{ base: "30%", lg: "10%" }}
       px="5%"
-      h={{ base: "87vh", lg: "100%" }}
+      h={{ base: "95vh", lg: "100%" }}
     >
       <Text
         fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}

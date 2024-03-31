@@ -97,7 +97,7 @@ function FeatureCard(props: FeatureCardProps) {
         </Box>
         <Box
           borderWidth="4px"
-          borderColor="primary.sub"
+          borderColor="primary.main"
           w={{ lg: "200px" }}
           h={{ lg: "170px" }}
           borderRadius="10px"

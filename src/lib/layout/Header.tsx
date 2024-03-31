@@ -40,13 +40,22 @@ export function Header() {
           <Button variant={"sub"} display={{ base: "none", lg: "flex" }}>
             Post a Job
           </Button>
-            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
-              Vacancy
-            </Button>
-          <Link href='#contact'>
           <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
-            Contact Us
+            Vacancy
           </Button>
+        </Flex>
+
+        <Flex gap={"1rem"} align={"center"}>
+          <Link href="#contact">
+            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
+              Contact Us
+            </Button>
+          </Link>
+
+          <Link href='/register'>
+            <Button variant={"main"} display={{ base: "none", lg: "flex" }}>
+              Register for a Training
+            </Button>
           </Link>
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
@@ -90,11 +99,16 @@ function HeaderMenu() {
       <Button variant={"main"} maxW={"320px"} w={"100%"}>
         Vacancy
       </Button>
-      <Link href="#contact">
         <Button variant={"main"} maxW={"320px"} w={"100%"}>
+      <Link href="#contact">
           Contact Us
-        </Button>
       </Link>
+        </Button>
+        <Button variant={"main"} maxW={"320px"} w={"100%"}>
+      <Link href="/register">
+          Register for a Training
+      </Link>
+        </Button>
     </Flex>
   );
 }
