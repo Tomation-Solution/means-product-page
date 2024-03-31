@@ -81,7 +81,7 @@ function Register() {
         color={"gray.700"}
         textAlign="center"
       >
-        BUSINESS REGISTRATION
+        TRAINING REGISTRATION
       </Text>
       <Flex
         flexDirection="column"
