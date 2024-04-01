@@ -13,8 +13,10 @@ import { Icon } from "@chakra-ui/icons";
 import { Heading } from "../../lib/components/Heading";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
+import {useState} from 'react'
 
 export function Hero() {
+  const [btn, setBtn] = useState({name: 'Contact Us', path: '#contact' });
   return (
     <>
       <Flex
@@ -43,9 +45,11 @@ export function Hero() {
               sequence={[
                 500,
                 "We are dedicated to transforming organizations through strategic training, staffing, and outsourcing solutions.",
+                () => setBtn({name:'Register For a Training', path: '/register'}),
                 5000,
-                "Business Process Management Career Development Program",
+                "Business Process Management Career Development Program.",
                 5000,
+                () => setBtn({name: 'Contact Us', path: '#contact'}),
                 "Let's help you through your staffing needs for your Business Process Management Workforce",
                 500,
               ]}
@@ -53,10 +57,10 @@ export function Hero() {
               style={{ fontSize: "2.3rem", fontWeight: "600", color: "black" }}
               repeat={Infinity}
             />
-            <Box w="100%">
-              <Link href="/register">
+            <Box w="600px">
+              <Link href={btn.path}>
                 <Button maxW={"55%"} variant={"cta"} px="10px">
-                  Register For a Training
+                  {btn.name}
                 </Button>
               </Link>
             </Box>
