@@ -57,7 +57,7 @@ export function Hero() {
               style={{ fontSize: "2.3rem", fontWeight: "600", color: "black" }}
               repeat={Infinity}
             />
-            <Box w="600px">
+            <Box w={{base:'100%', lg:"600px"}}>
               <Link href={btn.path}>
                 <Button maxW={"55%"} variant={"cta"} px="10px">
                   {btn.name}
