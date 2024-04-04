@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 export function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
- return (
+  return (
     <Flex
       direction={"column"}
       position={"fixed"}
@@ -26,6 +26,7 @@ export function Header() {
         borderBottomWidth={1}
         w={"100%"}
         bg={"white"}
+        gap='2ewm'
       >
         <Link href={"/"}>
           <Flex cursor={"pointer"} align={"center"} gap={".7rem"}>
@@ -35,25 +36,23 @@ export function Header() {
             </Text> */}
           </Flex>
         </Link>
-<Show above="md">
-        <Flex gap={"1rem"} align={"center"}>
- <Link href="">
-            Post a Job
-          </Link>
-<Link target="_blank" rel="noreferrer" href="https://sequentialjobs.com/searchpage">
-            Vacancy
-          </Link>
-        </Flex>
-</Show>
+        <Show above="md">
+          <Flex gap={"3rem"} align={"center"} fontWeight='500'>
+            <Link href="">Post a Job</Link>
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://sequentialjobs.com/searchpage"
+            >
+              Vacancy
+            </Link>
+          </Flex>
+        </Show>
 
-        <Flex gap={"1rem"} align={"center"}>
-<Show above="md">
-          <Link href="#contact">
-
-              Contact Us
-
-          </Link>
-</Show>
+        <Flex gap={"1rem"} align={"center"} fontWeight='500'>
+          <Show above="md">
+            <Link href="#contact">Contact Us</Link>
+          </Show>
 
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
@@ -70,7 +69,6 @@ export function Header() {
             }
           />
         </Flex>
-
       </Flex>
       {isOpen && <HeaderMenu />}
     </Flex>
@@ -92,18 +90,16 @@ function HeaderMenu() {
       w={"100%"}
       boxShadow={"2xl"}
     >
-<Link href="">
-        Post a Job
-      </Link>
-<Link target="_blank" rel="noreferrer" href="https://sequentialjobs.com/searchpage">
+      <Link href="">Post a Job</Link>
+      <Link
+        target="_blank"
+        rel="noreferrer"
+        href="https://sequentialjobs.com/searchpage"
+      >
         Vacancy
       </Link>
 
-      <Link href="#contact">
-          Contact Us
-      </Link>
-
-
+      <Link href="#contact">Contact Us</Link>
     </Flex>
   );
 }

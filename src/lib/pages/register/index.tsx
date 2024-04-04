@@ -59,7 +59,7 @@ function Register() {
         setLoader("Submit");
         toast({
           status: "success",
-          description: result || "Registration Successful",
+          description: result + "A mail will be sent to you soon" || "Registration Successful",
         });
         setName('')
         setPath('')
