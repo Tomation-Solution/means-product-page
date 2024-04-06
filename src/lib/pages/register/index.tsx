@@ -13,6 +13,7 @@ import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import addData from "../../logic/firebase/db";
 import { Timestamp } from "firebase/firestore";
+import { sendRegistrationSuccessEmail } from "../../utils/email";
 
 export function useAppToast() {
   return useToast({
@@ -50,7 +51,7 @@ function Register() {
       setLoader("Loading...");
       const { result, error } = await addData(
         "training-registration",
-        email,
+        email.toLowerCase(),
         data
       );
 
@@ -62,13 +63,18 @@ function Register() {
         });
         return console.log(error);
       } else {
-        setLoader("Submit");
-        toast({
-          status: "success",
-          description:
-            result + "A mail will be sent to you soon" ||
-            "Registration Successful",
+        const res = await sendRegistrationSuccessEmail({
+          toName: name,
+          toEmail: email.toLowerCase(),
         });
+        if (res) {
+          toast({
+            status: "success",
+            description:
+              "Registration successful! A mail will be sent to you soon"
+          });
+        }
+        setLoader("Submit");
         setName("");
         setPath("");
         setTelephone("");
