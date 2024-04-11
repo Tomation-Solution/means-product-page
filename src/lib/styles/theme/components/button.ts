@@ -20,7 +20,7 @@ export const Button: ComponentStyleConfig = {
     cta: {
       borderRadius: "10px",
       px: { base: "1.5rem", lg: "2.5rem" },
-      py: { base: ".7rem", lg: "1.5rem" },
+      py: { base: ".7rem", lg: "1.3rem" },
       bgGradient: "linear(to-r, secondary.sub__, primary.sub)",
       color: "white",
       _hover: {

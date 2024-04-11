@@ -21,7 +21,7 @@ export function Hero() {
     <>
       <Flex
         px={"5%"}
-        pt={{ base: "20%", lg: "10%" }}
+        pt={{ base: "20%", lg: "6%" }}
         pb={"5%"}
         gap={{ base: "50px", lg: "90px", xl: "110px" }}
         direction={"column"}
