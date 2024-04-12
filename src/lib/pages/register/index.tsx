@@ -8,6 +8,7 @@ import {
   FormControl,
   FormLabel,
   Text,
+  Image
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
@@ -192,6 +193,9 @@ function Register() {
         </Box>
 
         <Box width={{ base: "100%", lg: "45%" }} py={{ base: "5%", lg: "2%" }}>
+          <Box w={{ base: "100%", lg: "100%" }} pb='20px'>
+            <Image alt="" src={"/bpm.jpeg"} borderRadius="10px" />
+          </Box>
           <Text>
             Are you passionate about helping organizations streamline business
             processes, optimize performance, and drive organizational success?{" "}

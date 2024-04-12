@@ -37,17 +37,27 @@ export function JobListing() {
   ];
   return (
     <>
-      <Box py={{ base: "10%", lg: "5%" }} w="100%">
-        <Text
-          fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
-          fontWeight={"bold"}
-          color={"gray.700"}
-          textAlign="center"
-        >
-          JOB LISTING
-        </Text>
+      <Box
+        py={{ base: "10%", lg: "5%" }}
+        w="100%"
+        px={{ base: "5%", lg: "8%" }}
+      >
+        <Flex justify="space-between" pb='2rem'>
+          <Text
+            fontSize={{ base: "1.5rem", lg: "2rem", xl: "2.6rem" }}
+            fontWeight={"bold"}
+            color={"gray.700"}
+            textAlign="center"
+          >
+            JOB LISTING
+          </Text>
+          <Link href="/">
+            <Button px="2rem" variant={"cta"}>
+              View More
+            </Button>
+          </Link>
+        </Flex>
         <Flex
-          px={{ base: "5%", lg: "8%" }}
           // py={{ base: "10%", lg: "5%" }}
           gap={"50px"}
           flexWrap="wrap"
@@ -68,13 +78,7 @@ export function JobListing() {
           justifyContent={{ base: "center", lg: "center" }}
           align={{ base: "center", lg: "center" }}
           w="100%"
-        >
-          <Link href="/">
-            <Button px="2rem" variant={"cta"}>
-              View More
-            </Button>
-          </Link>
-        </Flex>
+        ></Flex>
       </Box>
       );
     </>
@@ -99,13 +103,15 @@ function JobCard(props: JobsCardProps) {
         borderRadius="10px 10px 0px 0px"
         zIndex={4}
       /> */}
-      <Flex direction={"column"} align={"flex-start"} gap="10px" p="15px">
-        <Text fontWeight={"bold"} color={"gray.700"}>
-          {props.name}
-        </Text>
-        <Text fontWeight={"semibold"} color={"gray.700"}>
-          Created:{props.date}
-        </Text>
+      <Flex direction={"column"} justify={'space-between'} h='100%' align={"flex-start"} gap="10px" p="15px">
+        <Box>
+          <Text fontWeight={"bold"} color={"gray.700"}>
+            {props.name}
+          </Text>
+          <Text fontWeight={"semibold"} color={"gray.700"}>
+            Created:{props.date}
+          </Text>
+        </Box>
         <Text color={"gray.500"} textAlign={"justify"}>
           {props.desc ||
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore" +
